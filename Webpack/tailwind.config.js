@@ -1,7 +1,7 @@
 ﻿const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: ['../hubspotProjectName/**/*'], //hubspot project name here
+  content: ['../yourHubspotProjectName/**/*'], //hubspot project name here
   darkMode: 'class',
   theme: {
     container: {

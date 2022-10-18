@@ -25,7 +25,7 @@ module.exports = {
     },
     mode: "production",
     output: {
-        path: path.join(__dirname, "../../hubspotProjectName/dist"), /* hubspot project name here */
+        path: path.join(__dirname, "../../yourHubspotProjectName/dist"), /* hubspot project name here */
         filename: "[name].js",
         chunkFilename: "[name].js",
         clean: true,
@@ -62,7 +62,7 @@ module.exports = {
                     path.resolve(__dirname, "../scripts/"),
                 ],
                 use: [
-                    !prod ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     require.resolve('css-loader'),
                     {
                         loader: "postcss-loader",
@@ -109,16 +109,7 @@ module.exports = {
         }),
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css",
-        }),
-        new HtmlWebpackPlugin({
-            publicPath: "/dist",
-            templateContent: ({ htmlWebpackPlugin }) => `
-                    ${htmlWebpackPlugin.tags.headTags}
-              `,
-            filename: "masterLinks.html",
-            minify: false,
-            inject: false,
+            filename: "[name].css",
         }),
         new StylelintPlugin({
             context: path.resolve(__dirname, "../Content/css"),
@@ -130,9 +121,5 @@ module.exports = {
             extensions: ["js"],
             fix: true,
         }),
-        new BrowserSyncPlugin({
-            proxy: 'https://localhost:44358/', //set to project url
-            open: true
-        })
     ],
 };
