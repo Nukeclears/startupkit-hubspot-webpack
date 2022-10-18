@@ -1,0 +1,16 @@
+@layer base {
+    h1,
+    .h1 {
+        @apply heading1;
+    }
+
+    h2,
+    .h2 {
+        @apply heading2;
+    }
+
+    h3,
+    .h3 {
+        @apply heading3;
+    }
+}

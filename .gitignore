@@ -1,0 +1,8 @@
+
+Webpack/.yarn/cache/
+Webpack/node_modules/
+
+hubspot.config.yml
+
+#ignore hubspot files, managed by hubspot repo
+hubspotProjectName/ 

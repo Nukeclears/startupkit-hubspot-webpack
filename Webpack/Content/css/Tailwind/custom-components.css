@@ -1,0 +1,20 @@
+@layer components {
+    .heading1 {
+        @apply text-5xl mb-48; }
+
+    .heading2 {
+        @apply text-3xl mb-3;
+    }
+
+    .heading3 {
+        @apply text-xl mb-2;
+    }
+
+    .prose {
+        @apply prose-h1:heading1 prose-h2:heading2 prose-h3:heading3 prose-a:link prose-a:link-primary prose-strong:font-bold;
+        @apply prose-p:text-base prose-p:mb-4;
+        @apply prose-li:marker:text-primary prose-li:my-0 prose-ul:pl-4;
+        @apply max-w-[50ch];
+    }
+
+}
