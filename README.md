@@ -35,11 +35,11 @@ Both sides will ignore each others files (except for Webpack it's output)
 4. Run *Yarn install* in */Webpack* directory
 
 ## Commands
-webpack::build	| builds your frontend					
-webpack::watch | builds your frontend, then watches for changes and reruns				
-webpack::debugging | builds your frontend, then watches for changes and reruns in development mode
+webpack::build	| builds your frontend  
+webpack::watch | builds your frontend, then watches for changes and reruns  
+webpack::debugging | builds your frontend, then watches for changes and reruns in development mode  
 
 ## Output
 
-Ouput is located in *./yourHubspotProjectName/Dist*
-You can then link the files in that directory as dependencies on your modules / pages in hubspot
+Ouput is located in *./yourHubspotProjectName/Dist*  
+You can then link the files in that directory as dependencies on your modules / pages in hubspot  
