@@ -25,12 +25,12 @@ Both sides will ignore each others files (except for Webpack it's output)
  - Sliders using Tiny Slider
 
 ## Setup
-1. Initialize your local development environment in the root directory of this project (hubspot.config.yml)
-2. Fetch the theme you will be working on to the local Development environment
+1. Initialize your local development environment in the root directory of this project (hubspot.config.yml)  
+2. Fetch the theme you will be working on to the local Development environment  
 	Example structure:  
-	*./yourHubspotProjectName
-	./Webpack
-	./hubspot.config.yml*
+	*./yourHubspotProjectName  
+	./Webpack  
+	./hubspot.config.yml  
 3. Rename all instances of "*yourHubspotProjectName*" to the directory name of your hubspot theme.
 4. Run *Yarn install* in */Webpack* directory
 
