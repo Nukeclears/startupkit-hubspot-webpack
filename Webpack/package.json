@@ -99,7 +99,7 @@
     "@typescript-eslint/parser": "^5.40.1",
     "@vimeo/player": "^2.18.0",
     "@vue/compiler-sfc": "^3.2.41",
-    "alpinejs": "^3.10.4",
+    "alpinejs": "3.10.2",
     "autoprefixer": "^10.4.12",
     "babel-loader": "^8.2.5",
     "browserlist": "^1.0.1",

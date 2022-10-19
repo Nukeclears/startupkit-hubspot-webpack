@@ -2219,12 +2219,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"alpinejs@npm:^3.10.4":
-  version: 3.10.4
-  resolution: "alpinejs@npm:3.10.4"
+"alpinejs@npm:3.10.2":
+  version: 3.10.2
+  resolution: "alpinejs@npm:3.10.2"
   dependencies:
     "@vue/reactivity": ~3.1.1
-  checksum: 1ead2d0431fa352a1ec5997155e70dfd5bb3f421e91deafcc122ace4e24358f53798bba33814a27234c86dbe7993d25e29b6be046e0eb673f1118134d451b4da
+  checksum: 100bca9107f041e679e9a84fde8955b14a3fd0713e19e80ce3437e34f66e3c9fea932f6a5df5032328e28510400e22bed68767b89cab082c0ee720cf89620d47
   languageName: node
   linkType: hard
 
@@ -6041,7 +6041,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.40.1
     "@vimeo/player": ^2.18.0
     "@vue/compiler-sfc": ^3.2.41
-    alpinejs: ^3.10.4
+    alpinejs: 3.10.2
     autoprefixer: ^10.4.12
     babel-loader: ^8.2.5
     browserlist: ^1.0.1
