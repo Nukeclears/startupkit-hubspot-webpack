@@ -71,9 +71,7 @@ module.exports = {
                                     require('tailwindcss/nesting'),
                                     require('tailwindcss'),
                                     require('autoprefixer'),
-                                    prod
-                                        ? require("cssnano")()
-                                        : false,
+                                    require("cssnano")()
                                 ].filter(Boolean),
                             },
                         },
