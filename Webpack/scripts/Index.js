@@ -9,11 +9,11 @@ const getComponents = async () => {
         //{ DefaultExport: Backgroundlazyload },
     ] = await Promise.all([
         import('./JS/Main'),
-        //import('./JS/StaticComponents/Vimeo/vimeo'),
-        //import('./JS/DynamicComponents/Sliders/Sliders'),
-        //import('./JS/DynamicComponents/Parallax/Parallax'),
-        //import('./JS/StaticComponents/backgroundLazyLoad/BackgroundLazyLoad'),
-        //import('./JS/StaticComponents/Vimeo/vimeo')
+        //import('./JS/Components/Vimeo/vimeo'),
+        //import('./JS/Components/Sliders/Sliders'),
+        //import('./JS/Components/Parallax/Parallax'),
+        //import('./JS/Components/backgroundLazyLoad/BackgroundLazyLoad'),
+        //import('./JS/Components/Vimeo/vimeo')
     ]);
 
     //vimeo();
