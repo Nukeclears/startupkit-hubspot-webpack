@@ -21,8 +21,8 @@
     "extends": "stylelint-config-sass-guidelines",
     "rules": {
       "indentation": 4,
-      "max-nesting-depth": null,
       "selector-max-compound-selectors": null,
+      "scss/selector-no-redundant-nesting-selector": null,
       "selector-class-pattern": null,
       "unit-disallowed-list": [
         "px",
