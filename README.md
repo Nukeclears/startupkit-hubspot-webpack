@@ -16,13 +16,13 @@ Both sides will ignore each others files (except for Webpack it's output)
  - Stylelint & eslint 
  - CSSNANO
 
-**JS modules that use or enable:**
+**JS modules that use or enable:**r
 
  - Background image lazy loading 
  - Video lazy loading 
  - Vimeo integration
  - Parallax using Simple Parallax JS 
- - Sliders using Tiny Slider
+ - Sliders using Blaze slider
 
 ## Setup
 1. Initialize your local development environment in the root directory of this project (hubspot.config.yml)  
