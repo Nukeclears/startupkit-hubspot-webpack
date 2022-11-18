@@ -5,15 +5,12 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const webpack = require("webpack");
 
-const mode = process.env.NODE_ENV || "development";
-const prod = mode === "production";
-
 module.exports = {
     entry: {
         index: "./scripts/Index.js",
         stylesheet: "./scripts/Styles.js",
         //vue: "./scripts/Vue/Vue.ts",
-        alpinejs: "./scripts/AlpineJS/index.js",
+        //alpinejs: "./scripts/AlpineJS/index.js",
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".vue", ".json"],
@@ -55,10 +52,6 @@ module.exports = {
             },
             {
                 test: /\.(sa|sc|c)ss$/,
-                include: [
-                    path.resolve(__dirname, "../Content/"),
-                    path.resolve(__dirname, "../scripts/"),
-                ],
                 use: [
                     MiniCssExtractPlugin.loader,
                     require.resolve('css-loader'),
