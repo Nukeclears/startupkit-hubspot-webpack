@@ -1,27 +1,11 @@
-﻿//eslint-disable-next-line
-const regeneratorRuntime = require("regenerator-runtime");
+﻿import {DefaultExport as Main} from './JS/Main'
+//import {DefaultExport as Sliders} from './JS/Components/Sliders/Sliders'
+//import {DefaultExport as Parallax} from './JS/Components/Parallax/Parallax'
+//import {DefaultExport as Vimeo} from './JS/Components/Vimeo/vimeo'
+//import {DefaultExport as backgroundLazyLoad} from './JS/Components/backgroundLazyLoad/BackgroundLazyLoad'
 
-const getComponents = async () => {
-    const [{ DefaultExport: Main },
-        //{ DefaultExport: vimeo },
-        //{ DefaultExport: Sliders },
-        //{ DefaultExport: Parallax },
-        //{ DefaultExport: Backgroundlazyload },
-    ] = await Promise.all([
-        import('./JS/Main'),
-        //import('./JS/Components/Vimeo/vimeo'),
-        //import('./JS/Components/Sliders/Sliders'),
-        //import('./JS/Components/Parallax/Parallax'),
-        //import('./JS/Components/backgroundLazyLoad/BackgroundLazyLoad'),
-        //import('./JS/Components/Vimeo/vimeo')
-    ]);
-
-    //vimeo();
-    //Sliders();
-    //Parallax();
-    //Backgroundlazyload();
-    Main();
-
-}
-
-getComponents();
+Main();
+//Sliders();
+//Parallax();
+//Vimeo();
+//backgroundLazyLoad();
