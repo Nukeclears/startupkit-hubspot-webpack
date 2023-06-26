@@ -1,6 +1,12 @@
 
-Webpack/.yarn/cache/
-Webpack/node_modules/
+
+Webpack/.yarn/*
+!Webpack/.yarn/cache
+!Webpack/.yarn/patches
+!Webpack/.yarn/plugins
+!Webpack/.yarn/releases
+!Webpack/.yarn/sdks
+!Webpack/.yarn/versions
 
 hubspot.config.yml
 

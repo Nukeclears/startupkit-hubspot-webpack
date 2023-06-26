@@ -1,4 +1,24 @@
 @layer base {
+    html {
+        @apply font-body;
+    }
+
+    body {
+        @apply min-h-screen flex flex-col m-0 overflow-x-hidden;
+    }
+
+    header {
+        @apply lg:sticky top-0 z-50;
+    }
+
+    main {
+        @apply flex flex-col flex-grow;
+    }
+
+    a {
+        @apply inline-block;
+    }
+
     h1,
     .h1 {
         @apply heading1;
@@ -13,4 +33,67 @@
     .h3 {
         @apply heading3;
     }
+
+    svg {
+        @apply shrink-0 transition-transform;
+    }
+
+.input,
+        [type='text'],
+        [type='email'],
+        [type='url'],
+        [type='password'],
+        [type='number'],
+        [type='date'],
+        [type='datetime-local'],
+        [type='month'],
+        [type='search'],
+        [type='tel'],
+        [type='time'],
+        [type='week'],
+        [multiple],
+        select {
+            @apply rounded-lg border border-[#cbd6e2] text-[#33475b] bg-[#f5f8fa] h-9 px-2 text-xs min-h-0 leading-none;
+        }
+
+        & .checkbox {
+            @apply shrink-0 h-auto w-auto cursor-auto border-none;
+        }
+
+        & .datepickerfieldwrapper {
+            @apply relative;
+
+            &::after {
+                @apply content-[''] absolute top-1/2 right-3 w-6 h-6 bg-cover bg-center opacity-80 -translate-y-1/2 pointer-events-none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5' /%3E%3C/svg%3E%0A");
+            }
+
+            & .datepickerfield {
+                @apply pr-11;
+            }
+        }
+
+        & [type='checkbox'] {
+            @apply rounded-[0.2rem] border-primary text-primary;
+        }
+
+        & .form-control {
+            @apply flex flex-col gap-y-1;
+        }
+
+        & .field-validation-error {
+            @apply text-error -mt-0.5;
+        }
+
+        & .input-validation-error {
+            @apply border-error;
+        }
+
+        & .singlecheckbox .form-label {
+            @apply hidden;
+        }
+
+        & * {
+            @apply focus:ring-0 focus:ring-offset-0 outline-offset-0 focus:outline-secondary !important;
+        }
 }

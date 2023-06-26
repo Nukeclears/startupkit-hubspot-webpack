@@ -9,14 +9,7 @@ module.exports = {
     entry: {
         index: "./scripts/Index.js",
         stylesheet: "./scripts/Styles.js",
-        //vue: "./scripts/Vue/Vue.ts",
-        //alpinejs: "./scripts/AlpineJS/index.js",
-    },
-    resolve: {
-        extensions: [".ts", ".tsx", ".js", ".vue", ".json"],
-        alias: {
-            vue$: "vue/dist/vue.esm-bundler.js",
-        },
+        alpinejs: "./scripts/AlpineJS/index.js",
     },
     mode: "production",
     output: {
@@ -27,10 +20,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.vue$/,
-                loader: "vue-loader",
-            },
             {
                 test: /\.js$/i,
                 include: [
