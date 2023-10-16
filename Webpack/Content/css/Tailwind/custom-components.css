@@ -1,10 +1,10 @@
 @layer components {
     .heading1 {
-        @apply text-5xl text-primary; 
+        @apply text-primary; 
     }
 
     .heading2 {
-        @apply text-3xl text-secondary;
+        @apply text-secondary;
     }
 
     .heading3 {

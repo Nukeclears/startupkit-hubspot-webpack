@@ -1,14 +1,16 @@
 {
-  "name": "startupkit-hubspot-webpack",
+  "name": "startupkit-umbraco-webpack",
   "version": "1.0.0",
   "author": "Thomas van Deursen",
   "license": "MIT",
   "main": "Index.js",
   "private": true,
   "scripts": {
-    "webpack::build": "cross-env NODE_ENV=production webpack --config ./.config/webpack.config.js",
-    "webpack::debugging": "webpack --watch --mode development --config ./.config/webpack.config.js",
-    "upgrade": "yarn upgrade-interactive"
+    "webpack::build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
+    "webpack::debugging": "webpack --watch --mode development --config ./webpack.config.js",
+    "upgrade": "yarn upgrade-interactive",
+    "mjml-build": "mjml -r ./Views/Email/source/*.mjml -o ./Views/Email/dist/",
+    "postinstall": "cd ../../ && husky install"
   },
   "browserslist": [
     "defaults"
@@ -17,39 +19,7 @@
     "preset": "default"
   },
   "stylelint": {
-    "extends": "stylelint-config-sass-guidelines",
-    "rules": {
-      "indentation": 4,
-      "selector-max-compound-selectors": null,
-      "scss/selector-no-redundant-nesting-selector": null,
-      "selector-class-pattern": null,
-      "unit-disallowed-list": [
-        "px",
-        "em"
-      ],
-      "selector-max-id": 1,
-      "selector-no-qualifying-type": null,
-      "block-no-empty": [
-        true,
-        {
-          "severity": "warning"
-        }
-      ],
-      "scss/at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": [
-            "extends",
-            "apply",
-            "tailwind",
-            "layer",
-            "components",
-            "utilities",
-            "screen"
-          ]
-        }
-      ]
-    }
+    "extends": "stylelint-config-standard"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -70,11 +40,7 @@
         "global"
       ],
       "no-unused-vars": "warn",
-      "curly": "warn",
-      "indent": [
-        "warn",
-        4
-      ]
+      "curly": "warn"
     }
   },
   "babel": {
@@ -83,50 +49,63 @@
     ]
   },
   "devDependencies": {
-    "@alpinejs/collapse": "^3.10.5",
-    "@alpinejs/focus": "^3.10.5",
-    "@alpinejs/intersect": "^3.10.5",
-    "@alpinejs/mask": "^3.10.5",
-    "@babel/core": "^7.22.5",
-    "@babel/eslint-parser": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/line-clamp": "^0.4.4",
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "^20.3.1",
-    "@typescript-eslint/eslint-plugin": "^5.60.0",
-    "@typescript-eslint/parser": "^5.60.0",
+    "@alpinejs/collapse": "^3.13.0",
+    "@alpinejs/focus": "^3.13.0",
+    "@alpinejs/intersect": "^3.13.0",
+    "@alpinejs/mask": "^3.13.0",
+    "@alpinejs/persist": "^3.13.0",
+    "@babel/core": "^7.23.0",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-typescript": "^7.23.0",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/alpinejs": "^3.13.2",
+    "@types/node": "^20.8.0",
+    "@types/vimeo__player": "^2.18.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
     "@vimeo/player": "^2.20.1",
-    "alpinejs": "3.10.2",
-    "autoprefixer": "^10.4.14",
-    "babel-loader": "^9.1.2",
-    "blaze-slider": "^1.9.3",
+    "alpinejs": "^3.13.0",
+    "babel-loader": "^9.1.3",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "browserlist": "^1.0.1",
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
-    "cssnano": "^6.0.1",
-    "eslint": "^8.43.0",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.50.0",
     "eslint-webpack-plugin": "^4.0.1",
+    "html-bundler-webpack-plugin": "^2.14.3",
+    "html-webpack-plugin": "^5.5.3",
+    "husky": "^8.0.3",
+    "lightningcss": "^1.22.0",
     "mini-css-extract-plugin": "^2.7.6",
-    "postcss": "^8.4.24",
+    "mjml": "^4.14.1",
+    "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.3",
+    "postcss-scss": "^4.0.9",
+    "shx": "^0.3.4",
     "simple-parallax-js": "^5.6.2",
-    "stylelint": "^15.9.0",
+    "source-map-loader": "^4.0.1",
+    "style-loader": "^3.3.3",
+    "stylelint": "^15.10.3",
     "stylelint-config-sass-guidelines": "^10.0.0",
-    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard": "^34.0.0",
     "stylelint-webpack-plugin": "^4.1.1",
-    "tailwindcss": "^3.3.2",
-    "ts-loader": "^9.4.3",
-    "tslib": "^2.5.3",
-    "typescript": "^5.1.3",
-    "webpack": "^5.88.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-merge": "^5.9.0"
+    "tailwindcss": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "tiny-slider": "^2.9.4",
+    "ts-loader": "^9.4.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "resolutions": {
     "@types/eslint": "^7.29.0",
     "autoprefixer": "10.4.5"
   },
-  "packageManager": "yarn@3.6.0"
+  "packageManager": "yarn@3.6.4"
 }
